@@ -59,7 +59,7 @@
 
 ### Настройка vsftpd
  ```
- sudo vim /etc/vsftpd.conf
+ sudo nano /etc/vsftpd.conf
  ```
  Доступ только для локальных пользователей:
     anonymous_enable=NO
