@@ -5,7 +5,7 @@
  sudo apt update
  ```
 
-# Устанавливаем vsftpd
+### Устанавливаем vsftpd
  ```
  sudo apt install vsftpd
  ```
@@ -15,7 +15,7 @@
  sudo systemctl status vsftpd
  ```
 
-# Если не запустилась, запускаем вручную
+### Если не запустилась, запускаем вручную
  ```
  sudo systemctl start vsftpd
  ```
@@ -25,17 +25,17 @@
  sudo systemctl enable vsftpd
  ```
 
-# Создаем пользователя ftpuser
+### Создаем пользователя ftpuser
  ```
  sudo adduser ftpuser
  ```
 
-# Добавляем пользователя в разрешенные
+### Добавляем пользователя в разрешенные
  ```
  echo "ftpuser" | sudo tee -a /etc/vsftpd.userlist
  ```
 
-# Создаем папку и настраиваем права на нее
+### Создаем папку для дистрибутивов и настраиваем права на нее
  ```
  sudo mkdir -p /usr/share/soft/
  ```
@@ -46,7 +46,18 @@
  sudo chown -R ftpuser: /usr/share/soft/
  ```
 
-# Настройка vsftpd
+ ### Создаем папку для сборок Docker'а и настраиваем права на нее
+ ```
+ sudo mkdir -p /usr/share/docker/
+ ```
+ ```
+ sudo chmod -R 750 /usr/share/docker/
+ ```
+ ```
+ sudo chown -R ftpuser: /usr/share/docker/
+ ```
+
+### Настройка vsftpd
  ```
  sudo vim /etc/vsftpd.conf
  ```
@@ -59,17 +70,17 @@
     chroot_local_user=YES
     allow_writeable_chroot=YES
 
-# Перезагрузка
+### Перезагрузка
  ```
  sudo systemctl restart vsftpd
  ```
 
-# Проверяем запустился ли
+### Проверяем запустился ли
  ```
  sudo systemctl status vsftpd
  ```
 
-# Доступ в файлзилле
+### Доступ в файлзилле
 
 Хост: sftp://сервер-IP
 Имя пользователя: ftpuser
