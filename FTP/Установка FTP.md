@@ -57,6 +57,17 @@
  sudo chown -R ftpuser: /usr/share/docker/
  ```
 
+ ### Создаем папку для данных Docker'а и настраиваем права на нее
+ ```
+ sudo mkdir -p /var/docker/
+ ```
+ ```
+ sudo chmod -R 750 /var/docker/
+ ```
+ ```
+ sudo chown -R ftpuser: /var/docker/
+ ```
+
 ### Настройка vsftpd
  ```
  sudo nano /etc/vsftpd.conf
