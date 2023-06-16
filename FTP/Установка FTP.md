@@ -1,4 +1,6 @@
-# Обновляем apt
+# Установка FTP
+
+### Обновляем apt
  ```
  sudo apt update
  ```
@@ -8,7 +10,7 @@
  sudo apt install vsftpd
  ```
 
-# Проверяем запустился ли
+### Проверяем запустился ли
  ```
  sudo systemctl status vsftpd
  ```
@@ -18,7 +20,7 @@
  sudo systemctl start vsftpd
  ```
 
-# Устанавливаем запуск со стартом ОС
+### Устанавливаем запуск со стартом ОС
  ```
  sudo systemctl enable vsftpd
  ```
