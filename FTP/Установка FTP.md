@@ -46,18 +46,7 @@
  sudo chown -R ftpuser: /usr/share/soft/
  ```
 
- ### Создаем папку для сборок Docker'а и настраиваем права на нее
- ```
- sudo mkdir -p /usr/share/docker/
- ```
- ```
- sudo chmod -R 750 /usr/share/docker/
- ```
- ```
- sudo chown -R ftpuser: /usr/share/docker/
- ```
-
- ### Создаем папку для данных Docker'а и настраиваем права на нее
+ ### Создаем папку для Docker'а и настраиваем права на нее
  ```
  sudo mkdir -p /var/docker/
  ```
